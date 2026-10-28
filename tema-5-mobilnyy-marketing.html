@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тема 5. Мобильный маркетинг и адаптация сайта — УП.09.02</title>
+<meta name="description" content="Мобильная стратегия, аудит в DevTools, Core Web Vitals, адаптивная вёрстка, изображения и удобство на смартфоне.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Тема 5. Мобильный маркетинг и адаптация сайта — УП.09.02">
+<meta property="og:description" content="Мобильная стратегия, аудит в DevTools, Core Web Vitals, адаптивная вёрстка, изображения и удобство на смартфоне.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d9480f'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EУП%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="top"><div class="top-in">
+<a class="brand" href="index.html"><span class="brand-mark">УП</span><span class="brand-text">УП.09.02</span></a>
+<nav class="nav" aria-label="Темы"><a href="index.html">Главная</a><a href="tema-1-dostupnost.html">1. Доступность</a><a href="tema-2-kontekstnaya-reklama.html">2. Контекст</a><a href="tema-3-kontent-marketing.html">3. Контент</a><a href="tema-4-smm.html">4. SMM</a><a href="tema-5-mobilnyy-marketing.html" aria-current="page">5. Мобильный</a><a href="tema-6-email-marketing.html">6. Email</a></nav>
+<button class="theme-btn" type="button" aria-label="Тема">☾</button>
+</div></header>
+<main id="main">
+
+<div class="wrap">
+ <div class="topic-hero">
+  <div class="big-num">05</div>
+  <div>
+   <span class="eyebrow">Тема 5 · Занятия 13–15 · 02.12 и 09.12</span>
+   <h1>Мобильный маркетинг и адаптация сайта</h1>
+   <p class="lead">Большая часть посещений сайтов в России приходится на смартфоны, а поисковые системы оценивают сайт в первую очередь по его мобильной версии (mobile-first индексация). Мобильный маркетинг — это стратегия работы с пользователем смартфона: быстрый сайт, удобные действия «в один тап», геосервисы, мессенджеры, QR-коды и push-уведомления.</p>
+  </div>
+ </div>
+ <div class="layout">
+  <aside class="toc" aria-label="Содержание темы"><b>Содержание</b><a href="PPTX/tema-5.pptx" download>⬇ Презентация</a><a href="#strategiya">Мобильная стратегия</a><a href="#cwv">Скорость: Core Web Vitals</a><a href="#adaptiv">Адаптивная вёрстка</a><a href="#izobrazheniya">Изображения и загрузка</a><a href="#praktika">Практическая работа</a><a href="#video">Видео</a><a href="#ssylki">Полезные ссылки</a><a href="#test">Тест для самопроверки</a></aside>
+  <article class="narrow">
+   <div class="practice" style="background:var(--blue-soft)"><div><h3>Презентация к теме</h3><p>Слайды занятия в формате PowerPoint: теория, схемы, этапы практической работы и вопросы для самопроверки.</p></div>
+    <a class="btn" href="PPTX/tema-5.pptx" download>⬇ Скачать презентацию</a></div>
+   
+   <section><h2 id="strategiya">Мобильная стратегия</h2>
+<p>Мобильный пользователь отличается от пользователя компьютера: он часто в дороге, с одной свободной рукой, на медленном интернете и хочет быстро совершить одно действие.</p>
+<ul>
+<li><b>Ключевые действия:</b> позвонить, построить маршрут, записаться, оформить заказ, написать в мессенджер.</li>
+<li><b>Инструменты:</b> адаптивный сайт, ссылки <code>tel:</code> и мессенджеров, карты (Яндекс Карты, 2ГИС), QR-коды на офлайн-носителях, PWA и push-уведомления, SMS и мессенджер-рассылки (только с согласия).</li>
+</ul>
+</section><section><h2 id="cwv">Скорость: Core Web Vitals</h2>
+<p>Core Web Vitals — три ключевые метрики пользовательского опыта, которые измеряют Lighthouse и PageSpeed Insights.</p>
+<figure class="info"><figcaption>Инфографика: пороги Core Web Vitals</figcaption>
+<svg viewBox="0 0 800 290" role="img" aria-label="LCP хорошо до 2,5 секунды, плохо больше 4. INP хорошо до 200 миллисекунд, плохо больше 500. CLS хорошо до 0,1, плохо больше 0,25">
+ <g font-size="15">
+  <text x="10" y="45" font-size="20" font-weight="800" class="t-ink">LCP</text>
+  <text x="10" y="67" font-size="12" class="t-ink2">загрузка главного</text>
+  <text x="10" y="82" font-size="12" class="t-ink2">элемента</text>
+  <rect x="150" y="28" width="250" height="40" rx="8" class="f-ok"/><rect x="402" y="28" width="180" height="40" rx="8" class="f-warn"/><rect x="584" y="28" width="206" height="40" rx="8" class="f-bad"/>
+  <text x="275" y="54" text-anchor="middle" font-weight="700" class="t-white">≤ 2,5 с — хорошо</text><text x="492" y="54" text-anchor="middle" font-weight="700" class="t-white">до 4 с</text><text x="687" y="54" text-anchor="middle" font-weight="700" class="t-white">&gt; 4 с — плохо</text>
+
+  <text x="10" y="135" font-size="20" font-weight="800" class="t-ink">INP</text>
+  <text x="10" y="157" font-size="12" class="t-ink2">отклик на</text>
+  <text x="10" y="172" font-size="12" class="t-ink2">действия</text>
+  <rect x="150" y="118" width="250" height="40" rx="8" class="f-ok"/><rect x="402" y="118" width="180" height="40" rx="8" class="f-warn"/><rect x="584" y="118" width="206" height="40" rx="8" class="f-bad"/>
+  <text x="275" y="144" text-anchor="middle" font-weight="700" class="t-white">≤ 200 мс — хорошо</text><text x="492" y="144" text-anchor="middle" font-weight="700" class="t-white">до 500 мс</text><text x="687" y="144" text-anchor="middle" font-weight="700" class="t-white">&gt; 500 мс — плохо</text>
+
+  <text x="10" y="225" font-size="20" font-weight="800" class="t-ink">CLS</text>
+  <text x="10" y="247" font-size="12" class="t-ink2">сдвиги</text>
+  <text x="10" y="262" font-size="12" class="t-ink2">макета</text>
+  <rect x="150" y="208" width="250" height="40" rx="8" class="f-ok"/><rect x="402" y="208" width="180" height="40" rx="8" class="f-warn"/><rect x="584" y="208" width="206" height="40" rx="8" class="f-bad"/>
+  <text x="275" y="234" text-anchor="middle" font-weight="700" class="t-white">≤ 0,1 — хорошо</text><text x="492" y="234" text-anchor="middle" font-weight="700" class="t-white">до 0,25</text><text x="687" y="234" text-anchor="middle" font-weight="700" class="t-white">&gt; 0,25 — плохо</text>
+ </g>
+</svg>
+<p class="src">Пороги по данным web.dev (Google).</p></figure>
+<ul>
+<li><b>LCP</b> ухудшают тяжёлые изображения первого экрана и блокирующие шрифты и скрипты.</li>
+<li><b>INP</b> ухудшают тяжёлые JavaScript-обработчики.</li>
+<li><b>CLS</b> вызывают изображения без размеров, баннеры и шрифты, которые «толкают» контент.</li>
+</ul>
+</section><section><h2 id="adaptiv">Адаптивная вёрстка</h2>
+<p>Основа — метатег viewport и медиазапросы. Подход <b>mobile first</b>: сначала стили для смартфона, потом расширяем для больших экранов.</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+/* базовые стили — для смартфона */
+.cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
+body { font-size: 16px; }
+
+/* от 768px — планшет */
+@media (min-width: 768px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+/* от 1200px — компьютер */
+@media (min-width: 1200px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}</code></pre>
+<figure class="info"><figcaption>Инфографика: ширины для проверки</figcaption>
+<svg viewBox="0 0 800 220" role="img" aria-label="Проверяем ширины 360, 414, 768 и 1280 пикселей">
+ <g>
+  <rect x="40" y="40" width="72" height="140" rx="12" fill="none" stroke-width="4" class="s-ink2"/><text x="76" y="205" text-anchor="middle" font-size="15" font-weight="700" class="t-ink">360 px</text>
+  <rect x="170" y="30" width="84" height="150" rx="12" fill="none" stroke-width="4" class="s-ink2"/><text x="212" y="205" text-anchor="middle" font-size="15" font-weight="700" class="t-ink">414 px</text>
+  <rect x="320" y="30" width="150" height="150" rx="12" fill="none" stroke-width="4" class="s-accent"/><text x="395" y="205" text-anchor="middle" font-size="15" font-weight="700" class="t-ink">768 px</text>
+  <rect x="530" y="40" width="230" height="130" rx="8" fill="none" stroke-width="4" class="s-ink2"/><rect x="610" y="170" width="70" height="12" class="f-surface2"/><text x="645" y="205" text-anchor="middle" font-size="15" font-weight="700" class="t-ink">1280 px</text>
+  <text x="76" y="115" text-anchor="middle" font-size="12" class="t-ink2">смартфон</text>
+  <text x="212" y="110" text-anchor="middle" font-size="12" class="t-ink2">крупный</text>
+  <text x="212" y="126" text-anchor="middle" font-size="12" class="t-ink2">смартфон</text>
+  <text x="395" y="110" text-anchor="middle" font-size="13" class="t-ink2">планшет</text>
+  <text x="645" y="110" text-anchor="middle" font-size="13" class="t-ink2">ноутбук</text>
+ </g>
+</svg></figure>
+<h3>Чек-лист мобильного удобства</h3>
+<ul>
+<li>Нет горизонтальной прокрутки на ширине 360 px.</li>
+<li>Основной текст — не меньше 16 px.</li>
+<li>Области нажатия — не меньше 48×48 px, между ними есть отступы.</li>
+<li>Телефон — ссылка <code>&lt;a href="tel:+74950000000"&gt;</code>.</li>
+<li>Правильные типы полей: <code>type="tel"</code>, <code>type="email"</code>, атрибут <code>autocomplete</code> — открывается нужная клавиатура и работает автозаполнение.</li>
+</ul>
+</section><section><h2 id="izobrazheniya">Изображения и загрузка</h2>
+<pre><code>&lt;img
+  src="hero-800.webp"
+  srcset="hero-480.webp 480w, hero-800.webp 800w, hero-1600.webp 1600w"
+  sizes="(max-width: 600px) 100vw, 800px"
+  width="800" height="450"
+  alt="Мастер меняет колесо в автосервисе"
+  loading="lazy"&gt;</code></pre>
+<ul>
+<li><b>srcset и sizes</b> — смартфон загрузит маленькую картинку, а не версию для монитора.</li>
+<li><b>WebP / AVIF</b> — в 2–3 раза легче JPEG при том же качестве.</li>
+<li><b>width и height</b> — браузер заранее резервирует место, CLS не растёт.</li>
+<li><b>loading="lazy"</b> — для изображений ниже первого экрана; картинке первого экрана lazy не ставят.</li>
+</ul>
+<div class="note"><b>PWA</b>Прогрессивное веб-приложение (manifest + service worker) можно установить на главный экран, оно работает без сети и умеет отправлять push-уведомления — промежуточный вариант между сайтом и мобильным приложением.</div>
+</section>
+   <section><h2 id="praktika">Практическая работа</h2>
+    <div class="practice"><div><h3>Практическая работа 5. Мобильный маркетинг</h3><p>Задание в формате Word: цель, ход работы с примерами выполнения, вывод. Выполняется на вашем собственном сайте.</p></div>
+    <a class="btn" href="practice/pr5-mobilnyy-marketing.docx" download>⬇ Скачать задание</a></div>
+    <p><b>Этапы работы:</b></p><ol class="steps-list"><li>Разработать мобильную стратегию проекта</li><li>Провести аудит мобильной версии в DevTools</li><li>Измерить производительность (Lighthouse Mobile, Core Web Vitals)</li><li>Адаптировать интерфейс и оптимизировать загрузку</li><li>Провести повторные измерения и сравнить</li><li>Сформулировать рекомендации</li></ol>
+    <div class="note"><b>Как сдавать</b>Отчёт оформляется по шаблону «Итоговый отчёт» со скриншотами (рисунки с подписями и ссылками на них в тексте). Изменения кода фиксируются коммитами в вашем репозитории GitHub.</div>
+   </section>
+   <section><h2 id="video">Видео по теме</h2><div class="videos"><a class="video" href="https://www.youtube.com/watch?v=GsfRzY3kBAs" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/GsfRzY3kBAs/hqdefault.jpg)"></div><span>Адаптивная HTML/CSS-вёрстка для новичков: CSS Grid, БЭМ, медиазапросы<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=ahYuxTRjY0g" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/ahYuxTRjY0g/hqdefault.jpg)"></div><span>Адаптивная вёрстка в CSS: desktop и mobile first, медиазапросы<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=Ba9Nab-iIC0" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/Ba9Nab-iIC0/hqdefault.jpg)"></div><span>Core Web Vitals. Метрики здорового сайта<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=S9ToWt5lqds" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/S9ToWt5lqds/hqdefault.jpg)"></div><span>Core Web Vitals: Full Breakdown and How to Improve Them<small>На английском, есть субтитры · YouTube</small></span></a></div></section>
+   <section><h2 id="ssylki">Полезные ссылки</h2><ul class="links"><li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener"><b>PageSpeed Insights</b><small>Проверка скорости и Core Web Vitals</small></a></li><li><a href="https://web.dev/articles/defining-core-web-vitals-thresholds" target="_blank" rel="noopener"><b>web.dev: пороги Core Web Vitals</b><small>Как определены значения «хорошо» и «плохо»</small></a></li><li><a href="https://developer.chrome.com/docs/devtools/device-mode" target="_blank" rel="noopener"><b>Chrome DevTools: Device Mode</b><small>Эмуляция мобильных устройств</small></a></li><li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries" target="_blank" rel="noopener"><b>MDN: медиазапросы</b><small>Справочник по @media</small></a></li><li><a href="https://squoosh.app/" target="_blank" rel="noopener"><b>Squoosh</b><small>Сжатие и конвертация изображений в WebP / AVIF прямо в браузере</small></a></li><li><a href="https://web.dev/learn/pwa" target="_blank" rel="noopener"><b>web.dev: курс по PWA</b><small>Как сделать прогрессивное веб-приложение</small></a></li></ul></section>
+   <section><h2 id="test">Тест для самопроверки</h2>
+    <p>Выберите один ответ. Если ответ неверный, вы увидите, почему он не подходит, и правильный вариант. Результаты никуда не отправляются.</p>
+    <div id="quiz" class="quiz"></div>
+    <script type="application/json" id="quiz-data">[{"q": "Какое значение LCP считается хорошим?", "o": [["До 0,1 с", "0,1 — это порог для CLS, и он измеряется не в секундах."], ["До 2,5 с", ""], ["До 10 с", "10 секунд — очень медленно, пользователь уйдёт раньше."], ["До 200 мс", "200 мс — порог для INP (отклик на действия)."]], "a": 1, "ok": "LCP до 2,5 с — хорошо, от 2,5 до 4 с — требует улучшения, больше 4 с — плохо."}, {"q": "Что чаще всего вызывает высокий CLS?", "o": [["Слишком много текста на странице", "Объём текста сам по себе не сдвигает макет."], ["Изображения и блоки без заранее заданных размеров", ""], ["Использование HTTPS", "HTTPS не влияет на сдвиги макета."], ["Медленный сервер", "Медленный сервер ухудшает LCP, а не CLS."]], "a": 1, "ok": "Задайте width и height (или aspect-ratio), чтобы браузер заранее зарезервировал место."}, {"q": "Без какого метатега мобильный браузер покажет сайт как уменьшенную «десктопную» версию?", "o": [["<meta charset>", "charset отвечает за кодировку символов."], ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">", ""], ["<meta name=\"description\">", "description нужен для сниппета в поиске."], ["<meta name=\"robots\">", "robots управляет индексацией."]], "a": 1, "ok": "viewport сообщает браузеру, что ширина страницы равна ширине экрана устройства."}, {"q": "Какой минимальный размер области нажатия рекомендуют для мобильных интерфейсов?", "o": [["16×16 px", "Слишком маленькая цель — по ней трудно попасть пальцем."], ["около 48×48 px", ""], ["100×100 px", "Это избыточно, интерфейс станет громоздким."], ["Размер не важен", "Мелкие кнопки — частая причина ошибочных нажатий."]], "a": 1, "ok": "Google рекомендует около 48×48 px, Apple — 44×44 pt."}, {"q": "Что делает атрибут loading=\"lazy\" у изображения?", "o": [["Сжимает изображение", "Сжатие выполняется заранее, например в Squoosh, атрибут его не делает."], ["Откладывает загрузку, пока изображение не приблизится к области просмотра", ""], ["Загружает изображение раньше остальных", "Это противоположное поведение — для него есть fetchpriority=\"high\"."], ["Включает анимацию появления", "Анимации задаются CSS, а не этим атрибутом."]], "a": 1, "ok": "Ленивую загрузку используют для картинок ниже первого экрана; главному изображению её не ставят."}, {"q": "Что означает mobile-first индексация?", "o": [["Мобильные сайты индексируются раньше остальных", "Речь не об очередности, а о том, какую версию оценивает поисковик."], ["Поисковая система оценивает сайт в первую очередь по его мобильной версии", ""], ["Сайт должен быть только мобильным", "Десктопная версия остаётся, но основой оценки служит мобильная."], ["Индексация доступна только из мобильного приложения", "Индексацию выполняет поисковый робот, а не приложение."]], "a": 1, "ok": "Если мобильная версия неудобна или урезана, это ухудшает позиции сайта в поиске."}, {"q": "Как сделать, чтобы в поле «Телефон» на смартфоне открывалась цифровая клавиатура?", "o": [["type=\"text\"", "Откроется обычная буквенная клавиатура."], ["type=\"tel\"", ""], ["type=\"number\"", "number предназначен для чисел (со стрелками и без знака +), для телефона он не подходит."], ["Это невозможно управлять", "Тип поля напрямую управляет видом клавиатуры."]], "a": 1, "ok": "type=\"tel\" вызывает телефонную клавиатуру, а autocomplete=\"tel\" — автозаполнение."}]</script>
+   </section>
+   <div class="pager"><a class="btn ghost" href="tema-4-smm.html">← Тема 4</a><a class="btn" href="tema-6-email-marketing.html">Тема 6 →</a></div>
+  </article>
+ </div>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+Учебная практика УП.09.02 «Оптимизация веб-приложений» · ПМ.09 «Проектирование, разработка и оптимизация веб-приложений» · Колледж информатики и программирования Финансового университета
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

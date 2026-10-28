@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тема 1. Аудит доступности сайта — УП.09.02</title>
+<meta name="description" content="Проверяем сайт на соответствие WCAG 2.2 и ГОСТ Р 52872-2019: контраст, клавиатура, альтернативный текст, экранные дикторы.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Тема 1. Аудит доступности сайта — УП.09.02">
+<meta property="og:description" content="Проверяем сайт на соответствие WCAG 2.2 и ГОСТ Р 52872-2019: контраст, клавиатура, альтернативный текст, экранные дикторы.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d9480f'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EУП%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="top"><div class="top-in">
+<a class="brand" href="index.html"><span class="brand-mark">УП</span><span class="brand-text">УП.09.02</span></a>
+<nav class="nav" aria-label="Темы"><a href="index.html">Главная</a><a href="tema-1-dostupnost.html" aria-current="page">1. Доступность</a><a href="tema-2-kontekstnaya-reklama.html">2. Контекст</a><a href="tema-3-kontent-marketing.html">3. Контент</a><a href="tema-4-smm.html">4. SMM</a><a href="tema-5-mobilnyy-marketing.html">5. Мобильный</a><a href="tema-6-email-marketing.html">6. Email</a></nav>
+<button class="theme-btn" type="button" aria-label="Тема">☾</button>
+</div></header>
+<main id="main">
+
+<div class="wrap">
+ <div class="topic-hero">
+  <div class="big-num">01</div>
+  <div>
+   <span class="eyebrow">Тема 1 · Занятия 1–3 · 21.10 и 28.10</span>
+   <h1>Аудит доступности сайта</h1>
+   <p class="lead">Доступность (accessibility, сокращённо a11y) — это возможность пользоваться сайтом для всех людей, в том числе для незрячих и слабовидящих, людей с нарушениями слуха, моторики и когнитивных функций. Доступный сайт удобнее и обычным пользователям: со смартфона на солнце, с одной свободной рукой, при медленном интернете.</p>
+  </div>
+ </div>
+ <div class="layout">
+  <aside class="toc" aria-label="Содержание темы"><b>Содержание</b><a href="PPTX/tema-1.pptx" download>⬇ Презентация</a><a href="#zachem">Зачем нужна доступность</a><a href="#pour">Четыре принципа WCAG</a><a href="#kontrast">Контраст текста</a><a href="#chek">Что проверять: чек-лист</a><a href="#instrumenty">Инструменты проверки</a><a href="#praktika">Практическая работа</a><a href="#video">Видео</a><a href="#ssylki">Полезные ссылки</a><a href="#test">Тест для самопроверки</a></aside>
+  <article class="narrow">
+   <div class="practice" style="background:var(--blue-soft)"><div><h3>Презентация к теме</h3><p>Слайды занятия в формате PowerPoint: теория, схемы, этапы практической работы и вопросы для самопроверки.</p></div>
+    <a class="btn" href="PPTX/tema-1.pptx" download>⬇ Скачать презентацию</a></div>
+   
+   <section><h2 id="zachem">Зачем нужна доступность</h2>
+<p>По оценкам ВОЗ, около 1,3 млрд человек в мире живут с выраженной инвалидностью — примерно каждый шестой. Если сайт ими не пользуется, бизнес теряет клиентов, а государственные и социальные сайты нарушают закон.</p>
+<ul>
+<li><b>Законодательство.</b> В России требования к доступности сайтов задаёт <b>ГОСТ Р 52872-2019</b>; он основан на международном стандарте <b>WCAG</b> (Web Content Accessibility Guidelines) консорциума W3C. Актуальная версия — WCAG 2.2.</li>
+<li><b>SEO.</b> Поисковые роботы «читают» страницу примерно как экранный диктор: им важны заголовки, атрибуты <code>alt</code>, подписи ссылок, структура документа.</li>
+<li><b>Удобство.</b> Крупные кнопки, хороший контраст и понятные формы улучшают поведенческие факторы — люди дольше остаются на сайте.</li>
+</ul>
+</section><section><h2 id="pour">Четыре принципа WCAG</h2>
+<p>Все требования WCAG сгруппированы в четыре принципа. Их запоминают по аббревиатуре <b>POUR</b>.</p>
+<figure class="info"><figcaption>Инфографика: принципы POUR</figcaption>
+<svg viewBox="0 0 800 300" role="img" aria-label="Четыре принципа WCAG: воспринимаемость, управляемость, понятность, надёжность">
+ <g>
+  <rect x="10" y="20" width="180" height="260" rx="16" class="f-surface2"/>
+  <circle cx="100" cy="80" r="34" class="f-accent"/><text x="100" y="92" text-anchor="middle" font-size="32" font-weight="800" class="t-white">P</text>
+  <text x="100" y="146" text-anchor="middle" font-size="18" font-weight="700" class="t-ink">Воспринимаемость</text>
+  <text x="100" y="178" text-anchor="middle" font-size="14" class="t-ink2">alt у картинок,</text>
+  <text x="100" y="198" text-anchor="middle" font-size="14" class="t-ink2">субтитры к видео,</text>
+  <text x="100" y="218" text-anchor="middle" font-size="14" class="t-ink2">контраст текста</text>
+ </g>
+ <g>
+  <rect x="210" y="20" width="180" height="260" rx="16" class="f-surface2"/>
+  <circle cx="300" cy="80" r="34" class="f-blue"/><text x="300" y="92" text-anchor="middle" font-size="32" font-weight="800" class="t-white">O</text>
+  <text x="300" y="146" text-anchor="middle" font-size="18" font-weight="700" class="t-ink">Управляемость</text>
+  <text x="300" y="178" text-anchor="middle" font-size="14" class="t-ink2">всё работает</text>
+  <text x="300" y="198" text-anchor="middle" font-size="14" class="t-ink2">с клавиатуры,</text>
+  <text x="300" y="218" text-anchor="middle" font-size="14" class="t-ink2">виден фокус</text>
+ </g>
+ <g>
+  <rect x="410" y="20" width="180" height="260" rx="16" class="f-surface2"/>
+  <circle cx="500" cy="80" r="34" class="f-ok"/><text x="500" y="92" text-anchor="middle" font-size="32" font-weight="800" class="t-white">U</text>
+  <text x="500" y="146" text-anchor="middle" font-size="18" font-weight="700" class="t-ink">Понятность</text>
+  <text x="500" y="178" text-anchor="middle" font-size="14" class="t-ink2">язык страницы,</text>
+  <text x="500" y="198" text-anchor="middle" font-size="14" class="t-ink2">понятные ошибки</text>
+  <text x="500" y="218" text-anchor="middle" font-size="14" class="t-ink2">в формах</text>
+ </g>
+ <g>
+  <rect x="610" y="20" width="180" height="260" rx="16" class="f-surface2"/>
+  <circle cx="700" cy="80" r="34" class="f-warn"/><text x="700" y="92" text-anchor="middle" font-size="32" font-weight="800" class="t-white">R</text>
+  <text x="700" y="146" text-anchor="middle" font-size="18" font-weight="700" class="t-ink">Надёжность</text>
+  <text x="700" y="178" text-anchor="middle" font-size="14" class="t-ink2">валидный HTML,</text>
+  <text x="700" y="198" text-anchor="middle" font-size="14" class="t-ink2">работа с экранными</text>
+  <text x="700" y="218" text-anchor="middle" font-size="14" class="t-ink2">дикторами</text>
+ </g>
+</svg></figure>
+<p>Каждый критерий имеет уровень соответствия: <b>A</b> — минимальный, <b>AA</b> — рекомендуемый (именно его требуют большинство стандартов и ГОСТ), <b>AAA</b> — максимальный, обязательным обычно не является.</p>
+</section><section><h2 id="kontrast">Контраст текста</h2>
+<p>Контраст — отношение яркости текста к яркости фона, от 1:1 (белое на белом) до 21:1 (чёрное на белом).</p>
+<figure class="info"><figcaption>Инфографика: нормы контраста WCAG</figcaption>
+<svg viewBox="0 0 800 170" role="img" aria-label="Шкала контраста: меньше 3 к 1 — не проходит, от 3 к 1 — крупный текст AA, от 4,5 к 1 — обычный текст AA, от 7 к 1 — AAA">
+ <rect x="20" y="40" width="200" height="44" rx="8" class="f-bad"/>
+ <rect x="222" y="40" width="160" height="44" rx="8" class="f-warn"/>
+ <rect x="384" y="40" width="200" height="44" rx="8" class="f-ok"/>
+ <rect x="586" y="40" width="194" height="44" rx="8" class="f-blue"/>
+ <text x="120" y="68" text-anchor="middle" font-size="16" font-weight="700" class="t-white">меньше 3:1</text>
+ <text x="302" y="68" text-anchor="middle" font-size="16" font-weight="700" class="t-white">от 3:1</text>
+ <text x="484" y="68" text-anchor="middle" font-size="16" font-weight="700" class="t-white">от 4,5:1</text>
+ <text x="683" y="68" text-anchor="middle" font-size="16" font-weight="700" class="t-white">от 7:1</text>
+ <text x="120" y="112" text-anchor="middle" font-size="14" class="t-ink">не проходит</text>
+ <text x="302" y="112" text-anchor="middle" font-size="14" class="t-ink">AA для крупного</text>
+ <text x="302" y="130" text-anchor="middle" font-size="14" class="t-ink">текста (от 24px)</text>
+ <text x="484" y="112" text-anchor="middle" font-size="14" class="t-ink">AA для обычного</text>
+ <text x="484" y="130" text-anchor="middle" font-size="14" class="t-ink">текста</text>
+ <text x="683" y="112" text-anchor="middle" font-size="14" class="t-ink">AAA — высший</text>
+ <text x="683" y="130" text-anchor="middle" font-size="14" class="t-ink">уровень</text>
+ <text x="20" y="24" font-size="13" class="t-ink2">1:1</text><text x="780" y="24" text-anchor="end" font-size="13" class="t-ink2">21:1</text>
+</svg>
+<p class="src">Пример: серый #999999 на белом даёт 2,8:1 — не проходит; #595959 на белом — 7:1, проходит даже AAA.</p></figure>
+</section><section><h2 id="chek">Что проверять: чек-лист</h2>
+<div class="table-wrap"><table>
+<tr><th>Что проверяем</th><th>Как правильно</th><th>Типичная ошибка</th></tr>
+<tr><td>Изображения</td><td>Осмысленный <code>alt</code>; у декоративных — пустой <code>alt=""</code></td><td><code>alt</code> отсутствует или <code>alt="картинка"</code></td></tr>
+<tr><td>Формы</td><td>У каждого поля есть <code>&lt;label for&gt;</code>, ошибки описаны текстом</td><td>Подсказка только в <code>placeholder</code></td></tr>
+<tr><td>Клавиатура</td><td>Все элементы доступны по Tab, порядок логичный</td><td>Меню открывается только наведением мыши</td></tr>
+<tr><td>Фокус</td><td>Виден контур фокуса (<code>:focus-visible</code>)</td><td><code>outline: none</code> без замены</td></tr>
+<tr><td>Заголовки</td><td>Один <code>h1</code>, уровни идут по порядку</td><td>Заголовки выбираются «по размеру шрифта»</td></tr>
+<tr><td>Язык</td><td><code>&lt;html lang="ru"&gt;</code></td><td>Атрибут <code>lang</code> отсутствует</td></tr>
+<tr><td>Кнопки-иконки</td><td><code>aria-label="Поиск"</code></td><td>Кнопка без текста — диктор говорит «кнопка»</td></tr>
+<tr><td>Масштаб 200 %</td><td>Контент не теряется, нет горизонтальной прокрутки</td><td>Фиксированная ширина в пикселях</td></tr>
+</table></div>
+<h3>Пример исправления</h3>
+<pre><code>&lt;!-- было --&gt;
+&lt;img src="book.jpg"&gt;
+&lt;input type="email" placeholder="E-mail"&gt;
+&lt;button&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/button&gt;
+
+&lt;!-- стало --&gt;
+&lt;img src="book.jpg" alt="Обложка книги «Мастер и Маргарита»"&gt;
+&lt;label for="email"&gt;E-mail&lt;/label&gt;
+&lt;input id="email" type="email" autocomplete="email"&gt;
+&lt;button aria-label="Поиск"&gt;&lt;svg aria-hidden="true"&gt;…&lt;/svg&gt;&lt;/button&gt;</code></pre>
+</section><section><h2 id="instrumenty">Инструменты проверки</h2>
+<ul>
+<li><b>Lighthouse</b> — встроен в Chrome DevTools (F12 → Lighthouse → Accessibility). Даёт оценку 0–100 и список проблем.</li>
+<li><b>WAVE</b> — расширение браузера, показывает ошибки прямо на странице значками.</li>
+<li><b>axe DevTools</b> — расширение, подробно описывает каждую ошибку со ссылкой на критерий WCAG.</li>
+<li><b>WebAIM Contrast Checker</b> — проверка пары цветов на контраст.</li>
+<li><b>NVDA</b> (бесплатный) или «Экранный диктор» Windows (Ctrl + Win + Enter) — проверка сайта «ушами» незрячего пользователя.</li>
+</ul>
+<div class="note warn"><b>Важно</b>Автоматические инструменты находят только около трети проблем. Навигацию с клавиатуры, понятность текстов и порядок фокуса всегда проверяют вручную.</div>
+</section>
+   <section><h2 id="praktika">Практическая работа</h2>
+    <div class="practice"><div><h3>Практическая работа 1. Аудит доступности сайта</h3><p>Задание в формате Word: цель, ход работы с примерами выполнения, вывод. Выполняется на вашем собственном сайте.</p></div>
+    <a class="btn" href="practice/pr1-dostupnost.docx" download>⬇ Скачать задание</a></div>
+    <p><b>Этапы работы:</b></p><ol class="steps-list"><li>Подготовить объект аудита и изучить критерии доступности</li><li>Выполнить автоматизированную проверку (Lighthouse, WAVE / axe)</li><li>Выполнить ручную проверку: клавиатура, контраст, масштаб, экранный диктор</li><li>Составить сводный протокол аудита</li><li>Устранить нарушения в коде и проверить повторно</li><li>Сформулировать рекомендации по доступности</li></ol>
+    <div class="note"><b>Как сдавать</b>Отчёт оформляется по шаблону «Итоговый отчёт» со скриншотами (рисунки с подписями и ссылками на них в тексте). Изменения кода фиксируются коммитами в вашем репозитории GitHub.</div>
+   </section>
+   <section><h2 id="video">Видео по теме</h2><div class="videos"><a class="video" href="https://www.youtube.com/watch?v=gfqacN7C-cw" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/gfqacN7C-cw/hqdefault.jpg)"></div><span>Как незрячие пользуются компьютером? Работа со скринридером<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=WLZRv_eCBHI" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/WLZRv_eCBHI/hqdefault.jpg)"></div><span>Тестирование веб-доступности с использованием скринридера<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=kafeKWpGdqg" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/kafeKWpGdqg/hqdefault.jpg)"></div><span>Web Content Accessibility Conformance Levels: A, AA, AAA<small>На английском, есть субтитры · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=Q0-BgA_wbHc" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/Q0-BgA_wbHc/hqdefault.jpg)"></div><span>Fix 80% of Your WCAG Problems With These 7 Changes<small>На английском, есть субтитры · YouTube</small></span></a></div></section>
+   <section><h2 id="ssylki">Полезные ссылки</h2><ul class="links"><li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener"><b>WCAG 2.2</b><small>Официальный текст стандарта W3C</small></a></li><li><a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener"><b>How to Meet WCAG — краткий справочник</b><small>Все критерии с фильтром по уровню A / AA / AAA</small></a></li><li><a href="https://weblind.ru/" target="_blank" rel="noopener"><b>Веблайнд</b><small>Русскоязычные рекомендации по доступности сайтов для незрячих</small></a></li><li><a href="https://web.dev/learn/accessibility?hl=ru" target="_blank" rel="noopener"><b>web.dev: курс по доступности</b><small>Бесплатный курс от Google</small></a></li><li><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener"><b>WebAIM Contrast Checker</b><small>Проверка контраста пары цветов</small></a></li><li><a href="https://wave.webaim.org/" target="_blank" rel="noopener"><b>WAVE</b><small>Онлайн-проверка и расширение браузера</small></a></li><li><a href="https://www.nvaccess.org/download/" target="_blank" rel="noopener"><b>NVDA</b><small>Бесплатный экранный диктор для Windows</small></a></li><li><a href="https://tproger.ru/articles/chto-takoe-dostupnost-sajta-i-kak-ejo-proverit" target="_blank" rel="noopener"><b>Tproger: что такое доступность сайта и как её проверить</b><small>Обзорная статья</small></a></li></ul></section>
+   <section><h2 id="test">Тест для самопроверки</h2>
+    <p>Выберите один ответ. Если ответ неверный, вы увидите, почему он не подходит, и правильный вариант. Результаты никуда не отправляются.</p>
+    <div id="quiz" class="quiz"></div>
+    <script type="application/json" id="quiz-data">[{"q": "Какой уровень соответствия WCAG обычно требуется стандартами и ГОСТ Р 52872-2019?", "o": [["A", "Уровень A — это минимум; его недостаточно, большинство требований (например, контраст) относятся к AA."], ["AA", ""], ["AAA", "AAA — максимальный уровень, его выполняют выборочно, обязательным он обычно не является."], ["Уровень не важен, достаточно оценки Lighthouse 90+", "Lighthouse проверяет лишь часть критериев и не заменяет соответствие стандарту."]], "a": 1, "ok": "Рекомендуемый и требуемый большинством стандартов уровень — AA."}, {"q": "Какой минимальный контраст нужен обычному тексту по уровню AA?", "o": [["2:1", "2:1 — слишком низкий контраст, текст плохо читается слабовидящими."], ["3:1", "3:1 допускается только для крупного текста (от 24px или 18,66px жирного)."], ["4,5:1", ""], ["21:1", "21:1 — максимально возможный контраст (чёрный на белом), а не минимальное требование."]], "a": 2, "ok": "Для обычного текста уровень AA требует контраст не ниже 4,5:1."}, {"q": "Какой alt правильный для декоративной картинки-разделителя?", "o": [["alt=\"картинка\"", "Слово «картинка» не несёт смысла, а диктор лишний раз прочитает его вслух."], ["Атрибут alt не указывать", "Без alt экранный диктор может прочитать имя файла — это мешает пользователю."], ["alt=\"\" (пустой)", ""], ["alt=\"декоративная линия-разделитель синего цвета\"", "Подробное описание украшения засоряет озвучку, оно не нужно пользователю."]], "a": 2, "ok": "Пустой alt сообщает дикторам, что изображение декоративное и его можно пропустить."}, {"q": "Что означает буква O в аббревиатуре POUR?", "o": [["Optimizable — оптимизируемость", "Такого принципа в WCAG нет; оптимизация скорости — отдельная тема."], ["Operable — управляемость", ""], ["Open — открытость кода", "Открытость исходного кода не относится к принципам доступности."], ["Online — доступность в сети", "Речь идёт не о доступности сервера, а о возможности пользоваться интерфейсом."]], "a": 1, "ok": "O — Operable: интерфейсом можно управлять, в том числе только с клавиатуры."}, {"q": "Разработчик убрал обводку у ссылок: a:focus { outline: none; }. Что не так?", "o": [["Всё правильно, обводка портит дизайн", "Без видимого фокуса пользователь клавиатуры не понимает, где находится."], ["Пользователи клавиатуры перестанут видеть, какой элемент в фокусе", ""], ["Ссылки перестанут индексироваться", "Стиль фокуса не влияет на индексацию поисковыми системами."], ["Ссылки перестанут открываться по Enter", "Стиль outline влияет только на внешний вид, функциональность не меняется."]], "a": 1, "ok": "Обводку можно перерисовать через :focus-visible, но убирать фокус без замены нельзя."}, {"q": "Почему подсказку для поля нельзя давать только в placeholder?", "o": [["placeholder не поддерживается браузерами", "placeholder поддерживается всеми современными браузерами."], ["Текст исчезает при вводе, часто низкоконтрастный и не всегда озвучивается как подпись", ""], ["placeholder замедляет загрузку страницы", "На скорость загрузки он не влияет."], ["Поисковые системы штрафуют за placeholder", "Санкций за placeholder нет."]], "a": 1, "ok": "У каждого поля должна быть постоянная подпись — элемент label, связанный с полем через for и id."}, {"q": "Какую долю проблем доступности обычно находят автоматические инструменты?", "o": [["100 % — ручная проверка не нужна", "Автоматика не может оценить смысл alt, логику порядка фокуса и понятность текстов."], ["Примерно треть, остальное требует ручной проверки", ""], ["Ни одной — они бесполезны", "Инструменты быстро находят типовые ошибки: нет alt, label, низкий контраст."], ["Только ошибки JavaScript", "Инструменты доступности анализируют разметку, стили и ARIA, а не только скрипты."]], "a": 1, "ok": "Автоматика находит около 30–40 % проблем, поэтому аудит всегда сочетает её с ручной проверкой."}, {"q": "Какой атрибут сообщает экранному диктору язык страницы?", "o": [["<meta charset=\"utf-8\">", "charset задаёт кодировку символов, а не язык."], ["<html lang=\"ru\">", ""], ["<body language=\"ru\">", "Атрибута language у body не существует."], ["<title lang>", "Язык всей страницы указывается у корневого элемента html."]], "a": 1, "ok": "Атрибут lang у тега html задаёт язык, и диктор выбирает правильное произношение."}]</script>
+   </section>
+   <div class="pager"><a class="btn ghost" href="index.html">← На главную</a><a class="btn" href="tema-2-kontekstnaya-reklama.html">Тема 2 →</a></div>
+  </article>
+ </div>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+Учебная практика УП.09.02 «Оптимизация веб-приложений» · ПМ.09 «Проектирование, разработка и оптимизация веб-приложений» · Колледж информатики и программирования Финансового университета
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

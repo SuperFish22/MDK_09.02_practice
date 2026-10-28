@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тема 6. Email-маркетинг — УП.09.02</title>
+<meta name="description" content="Сегментация, цепочки писем, законы о рассылках, форма подписки, вёрстка HTML-письма, тестирование и A/B-тесты.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Тема 6. Email-маркетинг — УП.09.02">
+<meta property="og:description" content="Сегментация, цепочки писем, законы о рассылках, форма подписки, вёрстка HTML-письма, тестирование и A/B-тесты.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d9480f'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EУП%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="top"><div class="top-in">
+<a class="brand" href="index.html"><span class="brand-mark">УП</span><span class="brand-text">УП.09.02</span></a>
+<nav class="nav" aria-label="Темы"><a href="index.html">Главная</a><a href="tema-1-dostupnost.html">1. Доступность</a><a href="tema-2-kontekstnaya-reklama.html">2. Контекст</a><a href="tema-3-kontent-marketing.html">3. Контент</a><a href="tema-4-smm.html">4. SMM</a><a href="tema-5-mobilnyy-marketing.html">5. Мобильный</a><a href="tema-6-email-marketing.html" aria-current="page">6. Email</a></nav>
+<button class="theme-btn" type="button" aria-label="Тема">☾</button>
+</div></header>
+<main id="main">
+
+<div class="wrap">
+ <div class="topic-hero">
+  <div class="big-num">06</div>
+  <div>
+   <span class="eyebrow">Тема 6 · Занятия 16–18 · 09.12 и 16.12</span>
+   <h1>Email-маркетинг</h1>
+   <p class="lead">Email-маркетинг — общение с клиентами через электронные письма: приветственные цепочки, новости, акции, напоминания о брошенной корзине. Это один из самых дешёвых каналов: база подписчиков принадлежит компании, а не соцсети, и письмо приходит тому, кто сам на него подписался.</p>
+  </div>
+ </div>
+ <div class="layout">
+  <aside class="toc" aria-label="Содержание темы"><b>Содержание</b><a href="PPTX/tema-6.pptx" download>⬇ Презентация</a><a href="#strategiya">Стратегия и сегментация</a><a href="#zakon">Законодательство</a><a href="#verstka">Вёрстка HTML-письма</a><a href="#metriki">Тестирование и метрики</a><a href="#praktika">Практическая работа</a><a href="#video">Видео</a><a href="#ssylki">Полезные ссылки</a><a href="#test">Тест для самопроверки</a></aside>
+  <article class="narrow">
+   <div class="practice" style="background:var(--blue-soft)"><div><h3>Презентация к теме</h3><p>Слайды занятия в формате PowerPoint: теория, схемы, этапы практической работы и вопросы для самопроверки.</p></div>
+    <a class="btn" href="PPTX/tema-6.pptx" download>⬇ Скачать презентацию</a></div>
+   
+   <section><h2 id="strategiya">Стратегия и сегментация</h2>
+<p>Одно письмо «всем сразу» работает хуже, чем письма для отдельных сегментов. Типичные сегменты: новые подписчики, покупатели, постоянные клиенты, неактивные (давно не открывали письма).</p>
+<figure class="info"><figcaption>Инфографика: приветственная (welcome) цепочка</figcaption>
+<svg viewBox="0 0 800 200" role="img" aria-label="Цепочка: подписка, письмо в день 0 с промокодом, письмо в день 3 с подборкой, письмо в день 7 с отзывами">
+ <path d="M60 80 H740" stroke-width="4" class="s-line"/>
+ <g font-size="14">
+  <circle cx="80" cy="80" r="26" class="f-ink2" style="fill:var(--ink-2)"/><text x="80" y="86" text-anchor="middle" font-size="18" class="t-white">✉</text>
+  <text x="80" y="135" text-anchor="middle" font-weight="700" class="t-ink">Подписка</text>
+  <text x="80" y="155" text-anchor="middle" class="t-ink2">на сайте</text>
+  <circle cx="300" cy="80" r="26" class="f-accent"/><text x="300" y="86" text-anchor="middle" font-weight="800" class="t-white">0</text>
+  <text x="300" y="135" text-anchor="middle" font-weight="700" class="t-ink">День 0</text>
+  <text x="300" y="155" text-anchor="middle" class="t-ink2">приветствие + промокод</text>
+  <circle cx="510" cy="80" r="26" class="f-blue"/><text x="510" y="86" text-anchor="middle" font-weight="800" class="t-white">3</text>
+  <text x="510" y="135" text-anchor="middle" font-weight="700" class="t-ink">День 3</text>
+  <text x="510" y="155" text-anchor="middle" class="t-ink2">полезная подборка</text>
+  <circle cx="720" cy="80" r="26" class="f-ok"/><text x="720" y="86" text-anchor="middle" font-weight="800" class="t-white">7</text>
+  <text x="720" y="135" text-anchor="middle" font-weight="700" class="t-ink">День 7</text>
+  <text x="720" y="155" text-anchor="middle" class="t-ink2">отзывы и кейсы</text>
+ </g>
+</svg></figure>
+<p>Другие автоматические (триггерные) цепочки: брошенная корзина, повторная покупка, день рождения, реактивация неактивных подписчиков.</p>
+</section><section><h2 id="zakon">Законодательство</h2>
+<div class="note warn"><b>Без согласия рассылать рекламу нельзя</b>По <b>статье 18 Федерального закона № 38-ФЗ «О рекламе»</b> реклама по сетям электросвязи (в том числе email) допускается только с предварительного согласия получателя. Доказать наличие согласия должен рекламораспространитель. Сбор e-mail и имени — обработка персональных данных, она регулируется <b>Федеральным законом № 152-ФЗ «О персональных данных»</b>.</div>
+<ul>
+<li>Флажок согласия <b>не отмечен по умолчанию</b>, рядом — ссылка на политику обработки персональных данных.</li>
+<li><b>Double opt-in</b> — подтверждение подписки по ссылке из письма: доказывает, что адрес принадлежит подписчику.</li>
+<li>В каждом письме — сведения об отправителе и ссылка «Отписаться».</li>
+</ul>
+</section><section><h2 id="verstka">Вёрстка HTML-письма</h2>
+<p>Почтовые клиенты поддерживают HTML и CSS гораздо хуже браузеров, поэтому письма верстают по особым правилам:</p>
+<ul>
+<li>Табличная вёрстка (<code>&lt;table&gt;</code>), ширина основного блока — около <b>600 px</b>.</li>
+<li>Стили — <b>встроенные</b> (<code>style="…"</code>): многие клиенты удаляют блок <code>&lt;style&gt;</code> или поддерживают его частично.</li>
+<li>У изображений — <code>alt</code>, ширина и высота: часто картинки по умолчанию отключены.</li>
+<li>Тема — до ~50 символов, прехедер (текст после темы в списке писем) — до ~100.</li>
+</ul>
+<pre><code>&lt;table role="presentation" width="600" cellpadding="0" cellspacing="0"
+       style="margin:0 auto;background:#ffffff;font-family:Arial,sans-serif"&gt;
+  &lt;tr&gt;&lt;td style="padding:24px;font-size:16px;line-height:24px;color:#1d2433"&gt;
+    Здравствуйте, {{name}}! Ваш промокод на 10 %: &lt;b&gt;HELLO10&lt;/b&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td align="center" style="padding:0 24px 24px"&gt;
+    &lt;a href="https://site.ru/catalog?utm_source=email&amp;utm_medium=newsletter"
+       style="display:inline-block;background:#d9480f;color:#ffffff;
+              padding:14px 28px;border-radius:8px;text-decoration:none"&gt;Выбрать игру&lt;/a&gt;
+  &lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</section><section><h2 id="metriki">Тестирование и метрики</h2>
+<p>Перед рассылкой письмо проверяют в нескольких почтовых сервисах (Яндекс Почта, Mail.ru, Gmail), на компьютере и смартфоне, в светлой и тёмной теме, с отключёнными картинками. <b>mail-tester.com</b> оценивает письмо на признаки спама. Доставляемость повышают записи домена <b>SPF</b>, <b>DKIM</b> и <b>DMARC</b> — они подтверждают, что письмо действительно отправлено от имени вашего домена.</p>
+<figure class="info"><figcaption>Инфографика: воронка email-рассылки (пример)</figcaption>
+<svg viewBox="0 0 800 260" role="img" aria-label="Из 1000 отправленных писем 970 доставлено, 250 открыто, 40 кликов, 6 заказов">
+ <g font-size="15">
+  <rect x="20" y="20" width="760" height="38" rx="8" class="f-blue"/><text x="36" y="45" font-weight="700" class="t-white">Отправлено — 1 000</text>
+  <rect x="20" y="66" width="737" height="38" rx="8" class="f-blue" opacity=".85"/><text x="36" y="91" font-weight="700" class="t-white">Доставлено — 970 (доставляемость 97 %)</text>
+  <rect x="20" y="112" width="250" height="38" rx="8" class="f-accent"/><text x="36" y="137" font-weight="700" class="t-white">Открыто — 250</text><text x="285" y="137" class="t-ink">Open rate ≈ 26 %</text>
+  <rect x="20" y="158" width="80" height="38" rx="8" class="f-ok"/><text x="36" y="183" font-weight="700" class="t-white">40</text><text x="115" y="183" class="t-ink">Клики: CTR = 40 / 970 ≈ 4 %, CTOR = 40 / 250 = 16 %</text>
+  <rect x="20" y="204" width="28" height="38" rx="8" class="f-warn"/><text x="60" y="229" class="t-ink">Заказы — 6 (конверсия из клика 15 %)</text>
+ </g>
+</svg></figure>
+<h3>A/B-тест</h3>
+<p>Меняют <b>один</b> элемент (тему, время отправки, текст кнопки), отправляют варианты двум равным случайным группам (например, по 10–20 % базы), победителя выбирают по заранее выбранной метрике и отправляют его остальным.</p>
+</section>
+   <section><h2 id="praktika">Практическая работа</h2>
+    <div class="practice"><div><h3>Практическая работа 6. Email-маркетинг</h3><p>Задание в формате Word: цель, ход работы с примерами выполнения, вывод. Выполняется на вашем собственном сайте.</p></div>
+    <a class="btn" href="practice/pr6-email-marketing.docx" download>⬇ Скачать задание</a></div>
+    <p><b>Этапы работы:</b></p><ol class="steps-list"><li>Разработать стратегию и сегментацию</li><li>Изучить правовые требования к рассылкам</li><li>Реализовать форму подписки на сайте</li><li>Сверстать HTML-письмо</li><li>Протестировать письмо в почтовых сервисах</li><li>Спланировать A/B-тест и оценку эффективности</li></ol>
+    <div class="note"><b>Как сдавать</b>Отчёт оформляется по шаблону «Итоговый отчёт» со скриншотами (рисунки с подписями и ссылками на них в тексте). Изменения кода фиксируются коммитами в вашем репозитории GitHub.</div>
+   </section>
+   <section><h2 id="video">Видео по теме</h2><div class="videos"><a class="video" href="https://www.youtube.com/watch?v=9mrCerDttJo" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/9mrCerDttJo/hqdefault.jpg)"></div><span>Как запустить эффективные email-рассылки с нуля и не нарушить закон<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=-L7IARE3n-g" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/-L7IARE3n-g/hqdefault.jpg)"></div><span>Адаптивная вёрстка HTML-письма в 2024<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=sSGo9VUWDMg" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/sSGo9VUWDMg/hqdefault.jpg)"></div><span>Как сделать письмо в рассылке, которое откроют<small>На русском · YouTube</small></span></a><a class="video" href="https://www.youtube.com/watch?v=u-jkI19omLo" target="_blank" rel="noopener"><div class="thumb" style="background-image:url(https://i.ytimg.com/vi/u-jkI19omLo/hqdefault.jpg)"></div><span>Адаптивная вёрстка письма с нуля<small>На русском · YouTube</small></span></a></div></section>
+   <section><h2 id="ssylki">Полезные ссылки</h2><ul class="links"><li><a href="https://www.consultant.ru/law/podborki/reklama_bez_soglasiya/" target="_blank" rel="noopener"><b>КонсультантПлюс: реклама без согласия</b><small>Подборка материалов по ст. 18 закона «О рекламе»</small></a></li><li><a href="https://www.mail-tester.com/" target="_blank" rel="noopener"><b>Mail-tester</b><small>Проверка письма на признаки спама</small></a></li><li><a href="https://www.caniemail.com/" target="_blank" rel="noopener"><b>Can I email</b><small>Какие HTML и CSS поддерживают почтовые клиенты</small></a></li><li><a href="https://www.unisender.com/ru/" target="_blank" rel="noopener"><b>Unisender</b><small>Сервис рассылок с бесплатным тарифом</small></a></li><li><a href="https://dashamail.ru/" target="_blank" rel="noopener"><b>DashaMail</b><small>Российский сервис email-рассылок</small></a></li><li><a href="https://postmaster.mail.ru/" target="_blank" rel="noopener"><b>Postmaster Mail.ru</b><small>Статистика доставляемости писем на Mail.ru</small></a></li></ul></section>
+   <section><h2 id="test">Тест для самопроверки</h2>
+    <p>Выберите один ответ. Если ответ неверный, вы увидите, почему он не подходит, и правильный вариант. Результаты никуда не отправляются.</p>
+    <div id="quiz" class="quiz"></div>
+    <script type="application/json" id="quiz-data">[{"q": "Можно ли отправлять рекламную рассылку по купленной базе адресов?", "o": [["Да, если база куплена официально", "Покупка базы не даёт согласия получателей — это нарушение ст. 18 закона «О рекламе»."], ["Нет, нужно предварительное согласие каждого получателя", ""], ["Да, если в письме есть ссылка «Отписаться»", "Ссылка отписки обязательна, но не заменяет предварительное согласие."], ["Да, если отправлять не чаще раза в месяц", "Частота рассылки не влияет на требование о согласии."]], "a": 1, "ok": "Реклама по сетям электросвязи допускается только с предварительного согласия получателя."}, {"q": "Что такое double opt-in?", "o": [["Подписка сразу на две рассылки", "Количество рассылок здесь ни при чём."], ["Подтверждение подписки по ссылке из письма", ""], ["Двойная отправка письма для надёжности", "Повторная отправка раздражает подписчиков и повышает риск спама."], ["Два флажка согласия в форме", "Число флажков не делает подписку двойной."]], "a": 1, "ok": "Подписчик подтверждает адрес по ссылке — так база чище, а согласие доказуемо."}, {"q": "Почему в HTML-письмах используют встроенные стили (style=\"…\")?", "o": [["Так короче код", "Наоборот, код получается длиннее."], ["Многие почтовые клиенты удаляют или частично поддерживают блок <style>", ""], ["Внешние CSS-файлы запрещены законом", "Закон этого не регулирует; дело в поддержке клиентами."], ["Чтобы письмо не открывалось на смартфоне", "Цель противоположная — письмо должно везде отображаться корректно."]], "a": 1, "ok": "Встроенные стили надёжнее всего отображаются в разных почтовых клиентах."}, {"q": "Письмо доставлено 1 000 раз, открыто 200, кликов 30. Чему равен CTOR?", "o": [["3 %", "Это CTR — клики, делённые на доставленные письма."], ["15 %", ""], ["20 %", "Это open rate — открытия, делённые на доставленные."], ["30 %", "30 — абсолютное число кликов, а не процент."]], "a": 1, "ok": "CTOR = клики / открытия = 30 / 200 = 15 %. Показывает, насколько интересно содержимое письма."}, {"q": "Для чего нужны записи SPF, DKIM и DMARC?", "o": [["Для вёрстки письма", "Это настройки DNS домена, на вёрстку они не влияют."], ["Чтобы подтвердить, что письмо отправлено от имени вашего домена, и повысить доставляемость", ""], ["Для шифрования содержимого письма", "Они проверяют отправителя, а не шифруют текст."], ["Для сбора статистики открытий", "Открытия считает сервис рассылки, а не эти записи."]], "a": 1, "ok": "Без SPF, DKIM и DMARC письма чаще попадают в спам."}, {"q": "Как правильно проводить A/B-тест темы письма?", "o": [["Менять одновременно тему, кнопку и картинку", "Тогда непонятно, какое изменение повлияло на результат."], ["Менять только тему и отправить варианты двум равным случайным группам", ""], ["Отправить вариант A в понедельник, вариант B в пятницу", "Разное время отправки добавляет второй фактор и искажает результат."], ["Выбрать победителя по мнению руководителя", "Победителя определяют по метрике (например, open rate), а не по мнению."]], "a": 1, "ok": "В A/B-тесте меняется один элемент, остальные условия одинаковы."}, {"q": "Каким должен быть флажок согласия в форме подписки?", "o": [["Отмечен по умолчанию, чтобы было удобнее", "Предустановленная галочка не считается осознанным согласием."], ["Не отмечен по умолчанию, со ссылкой на политику обработки персональных данных", ""], ["Скрыт, чтобы не мешать дизайну", "Скрытое согласие не является согласием."], ["Флажок не нужен, достаточно ввести e-mail", "Нужно явное согласие на обработку персональных данных и получение рассылки."]], "a": 1, "ok": "Пользователь сам ставит галочку и может прочитать политику обработки данных."}]</script>
+   </section>
+   <div class="pager"><a class="btn ghost" href="tema-5-mobilnyy-marketing.html">← Тема 5</a><a class="btn" href="index.html#raboty">Все практические работы →</a></div>
+  </article>
+ </div>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+Учебная практика УП.09.02 «Оптимизация веб-приложений» · ПМ.09 «Проектирование, разработка и оптимизация веб-приложений» · Колледж информатики и программирования Финансового университета
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
